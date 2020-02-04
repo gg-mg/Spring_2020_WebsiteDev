@@ -1,0 +1,82 @@
+/******************************
+    Table of contents
+
+Project Name:
+Author:
+Version:
+Last Changed:
+Colors:
+Typography:
+Nav:
+Headings:
+Main:
+Footer:
+*/
+/*--------------Entire Web Page---------------------*/
+body {
+     background-color: #fff;
+     color: #666666;
+     font-family: Arial, Verdana, sans-serif;
+}
+/*--------------Entire Web Page---------------------*/
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}  
+ /*--------------Wrapper----------------------------*/
+header{
+    background-color: #000033;
+    color: #ffffff;
+    line-height: 200%;
+}
+nav {
+    font-weight: bold;
+    background-color: #90c7e3;
+}
+/*--------------Nav----------------------------------*/
+h1 {
+    background-color: #191970;
+    color: #e6e6fa;
+    line-height: 200%;
+    font-family: Georgia, "Times New Roman", serif;
+    text-shadow: 3px 3px 5px #cccccc;    
+} 
+/*--------------Headings------------------------------*/
+h2 {background-color: #aeaed4;
+    color: #3399cc;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+/*--------------Main----------------------------------*/
+dt{
+    color: #000033;
+    font-weight: bold;
+}
+p {
+    font-size: .90em;
+    text-indent: 3em;
+}
+ul {
+    font-weight: bold;
+}
+.feature {
+     color:#C70000 ;
+}
+.resort{
+    color: #000033;
+    font-size: 1.2em;
+}
+/*--------------Footer----------------------------------*/
+footer{
+    color: #333333;
+    font-size: .70em;
+    font-style: italic;
+    text-align: center;
+}
+.company{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25em;
+}
