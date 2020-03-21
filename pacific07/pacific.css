@@ -1,0 +1,293 @@
+/* *****************************
+    Table of contents
+
+Project Name: Pacific Trails Resort
+Author: George Gichuki
+Version: OCCC Spring 2020
+Last Changed: 3/3/2020
+
+Colors:  #666 (Gray 40)
+         #fff (White)
+         #003 (Dark Blue)
+         #39c (Medium-Blue)  
+         #ccc  (Gray 80)
+         #90c7e3 (Sky Blue)
+         #333 (Grey20)      
+
+Typography:
+
+Body:  
+    Arial, Verdana, sans-serif
+Headings: 
+    header: Georgia, "Times New Roman", serif
+    h2: Georgia, 'Times New Roman', Times, serif
+Main:
+    .resort 1.2em
+Footer:
+    .70em
+****************************** */
+
+/* ********************************************************************
+                          Entire Page
+******************************************************************** */
+body {
+     background-color: #fff;
+     color: #666;
+     font-family: Arial, Verdana, sans-serif;
+     background-image: url('images/WSD05_Images/background.jpg');
+}
+.clear{
+    clear: both;
+}
+header, nav, main, footer{
+    display: block;
+}
+ 
+/* ********************************************************************
+                          Headings
+******************************************************************** */
+header{
+    background-color: #003;
+    color: #fff;
+    line-height: 200%;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {    
+     
+    background-image: url('images/WSD05_Images/sunset.jpg');
+    background-position: right;
+    background-repeat: no-repeat;    
+    height: 72px;
+    line-height: 200%; 
+    margin-bottom: 0;
+    padding-left: 20px;
+} 
+
+h2 {    
+    color: #39c;    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3{
+    color:#003;
+}
+
+/* ********************************************************************
+                          Nav
+******************************************************************** */
+nav {
+    font-weight: bold;
+    /*background-color: #90c7e3;*/
+    float: left;
+    /*padding: 5px;*/
+    padding: 20px 5px 0px 5px;
+    width: 160px;
+}
+nav a {
+    background-color: #003;
+    text-decoration: none;
+    display: block;
+    border: 2px #ccc outset;
+    padding: 5px;   
+    color: #fff;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+}
+nav a:visited{
+    background-color: #90C7E3;
+}
+nav a:hover{
+    background-color: #39c;
+    border: 3px #666 inset;
+}
+    
+/* ********************************************************************
+                          Main
+******************************************************************** */
+dt{
+    color: #003;
+    font-weight: bold;
+}
+
+.resort{
+    color: #003;
+    font-size: 1.2em;
+}
+
+main{
+    padding-left: 20px;
+    padding-right: 20px;
+    /*display: block;*/
+    background-color: #fff;
+    margin-left: 170px;
+    padding: 1px 20px 1px 20px;
+}
+main img{
+    float: left;
+    padding: 0px 20px 20px 0px;
+}
+main ul{
+    list-style-position: inside;
+}
+#mobile{display:none;}
+#desktop{display:inline;}
+/* ********************************************************************
+                          Footer
+******************************************************************** */
+footer{  
+    background-color: #fff;
+    font-size: .70em;
+    font-style: italic;
+    margin-left: 170px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ********************************************************************
+                          Wrapper
+******************************************************************** */
+#wrapper {
+    /*background-color: #fff;*/
+    background-color: #90c7e3;
+    box-shadow: 3px 3px 3px #666;
+    margin-left: auto;
+    margin-right: auto;  
+    min-width: 700px;  
+    max-width: 1024px;
+    width: 80%;   
+} 
+/* ********************************************************************
+                          Tablet Media Query
+******************************************************************** */
+@media only screen and (max-width:1024px){
+    body{
+        margin: 0;
+        padding: 0;       
+    }
+    #wrapper{
+        width: auto;
+        min-width: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+    h1{
+        margin: 0;
+    }
+    nav{
+        float: none;
+        width: auto;
+        padding: 0.5em;
+    }
+    nav li{
+        display: inline-block;
+    }
+    nav a{
+        padding: 1em;
+    }
+    main{
+        padding: 1em;
+        margin: 0;
+        font-size: .90em;
+    }
+    footer{
+        margin-left: 0;
+    }
+    #navBottom{
+        display: none;
+    }
+}
+/* ********************************************************************
+                          Smartphone Media Query
+******************************************************************** */
+@media only screen and (max-width:768px){
+
+    h1{
+       height: 100%;
+       font-size: 1.5em;
+       padding-left: 0.3em; 
+    }
+    nav{        
+        padding: 0;
+    }   
+    nav li{
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: 0.85em;
+    }
+    nav a{
+        display: block;
+        padding: 0.2em;
+        font-size: 1.3em;
+        border-bottom: 1px #300 solid;
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    main{        
+        padding: 0.1em 0 0.1em 0.4em;       
+    }
+    main img{
+        display: none;
+        padding-right: 0;
+    }
+    main ul{
+        list-style-position: outside;
+    }
+    footer{
+        margin-left: 0;
+        padding: 0;
+    }
+    #navBottom{
+        display: none;
+    }
+    #mobile{display:inline;}
+    #desktop{display:none;}
+
+}
+/* ********************************************************************
+                          Print Media Query
+******************************************************************** */
+@media print{
+    body{       
+        background-image: none;   
+     }  
+    h1{
+        margin-top: 0;
+        margin-bottom: 0;
+    }   
+    nav{
+        display: none;
+    } 
+    main{
+        width: 90%;
+        padding: 1px 10px 1px 10px;
+        margin-left: 10px;
+        margin-right: 10px;      
+    }
+    main a::after{
+        content: " (" attr(href) ") ";
+        font-size: 0.9em;
+    }
+    footer{
+        margin-left: 0;
+    }
+    #wrapper{
+        background-color:#FFF;
+        min-width: 0;
+        width: 95%;
+       box-shadow: none;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    #navBottom{
+        display: none;
+    }
+}

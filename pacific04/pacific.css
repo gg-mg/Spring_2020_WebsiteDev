@@ -1,0 +1,114 @@
+/******************************
+    Table of contents
+
+Project Name: Pacific Trails Resort
+Author: George Gichuki
+Version: OCCC Spring 2020
+Last Changed: 2/26/2020
+
+Colors: 
+body:   
+    content #666666 (Gray40)
+    back-ground #fff (White)
+
+Headings: 
+    header: 
+        back-ground #000033 (Dark Blue)
+        content #fff (White)   
+    h2: content #3399cc (Medium-Blue)  
+    h3: content #003 (Dark Blue)      
+nav:    
+    #90c7e3 (Sky Blue)
+main:   
+    dt #000033 (Dark Blue)    
+    .resort #000033 (Dark Blue)
+footer: content #333333 (Grey20)
+        
+Typography:
+Body:  
+    Arial, Verdana, sans-serif
+Headings: 
+    header: Georgia, "Times New Roman", serif
+    h2: Georgia, 'Times New Roman', Times, serif
+Main:
+    .resort 1.2em
+Footer:
+    .70em
+*/
+/*--------------Entire Web Page---------------------*/
+body {
+     background-color: #fff;
+     color: #666666;
+     font-family: Arial, Verdana, sans-serif;
+     background-image: url('images/WSD05_Images/background.jpg');
+}
+ 
+ /*--------------Headings----------------------------*/
+header{
+    background-color: #000033;
+    color: #ffffff;
+    line-height: 200%;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {    
+     
+    background-image: url('images/WSD05_Images/sunset.jpg');
+    background-position: right;
+    background-repeat: no-repeat;    
+    height: 72px;
+    line-height: 200%; 
+    margin-bottom: 0;
+    padding-left: 20px;
+} 
+
+h2 {    
+    color: #3399cc;    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3{
+    color:#003;
+}
+
+/*--------------Nav----------------------------------*/
+nav {
+    font-weight: bold;
+    background-color: #90c7e3;
+    padding: 5px;
+}
+    
+/*--------------Main----------------------------------*/
+dt{
+    color: #000033;
+    font-weight: bold;
+}
+
+.resort{
+    color: #000033;
+    font-size: 1.2em;
+}
+
+main{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+/*--------------Footer----------------------------------*/
+footer{  
+    font-size: .70em;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+/*--------------Wrapper----------------------------------*/
+#wrapper {
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #666;
+    margin-left: auto;
+    margin-right: auto;  
+    min-width: 700px;  
+    max-width: 1024px;
+    width: 80%;   
+} 
