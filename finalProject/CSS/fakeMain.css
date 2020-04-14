@@ -1,0 +1,51 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #left {
+    float:left;
+    width:65px;
+    background-color:#ff0000;
+}
+#center {
+    float:left;
+    width:800px;
+    max-width: initial; 
+    background-color:#00AA00;
+}
+#right {
+    float:right;
+    width: 100px;
+    background-color:#390080;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ 
+#wrapper {
+	width: 1600px;
+	background: silver;
+	margin: 0 auto;
+}
+ 
+
+#column-left {
+	width: 250px;
+	float: left;
+	background: red;
+}
+ 
+#column-center {
+	width: 800px;
+	float: left;
+	background: yellow;
+}
+ 
+#column-right {
+	width: 550px;
+	float: left;
+	background: purple;
+}

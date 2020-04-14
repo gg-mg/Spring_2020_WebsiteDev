@@ -1,0 +1,39 @@
+
+
+/*@media print{
+    .displayImage{
+        display: block;
+    }
+    .displayVideo{
+        display: none;
+    }
+    #gallery ul {
+        width:425px;
+    }
+    
+    #gallery a:after {
+        content: " (" attr(title) ") ";
+    }
+    #gallery ul a img{
+         float:left; 
+    }
+    #desktopGallery{
+        display:none;
+    }
+    #mobileGallery{
+        display:none;
+    }
+}*/
+#mobileGallery {
+    font-size: 1.5em;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #mobileGallery {
+        background-color:#ff0000;
+        display: block;
+    } 
+   }
+   
+

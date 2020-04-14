@@ -1,0 +1,130 @@
+#demo{
+    display:flex;
+    flex-direction: row;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.us{
+    flex:7;
+   background-color: gainsboro;
+    font-size: larger; 
+    /*border: 1px solid black;*/
+    word-wrap: break-word;
+     
+}
+.kenya{
+    margin-left: auto;
+    margin-right: auto;
+    width:800px;
+    word-wrap: break-word;
+    justify-content: center;
+}
+.ul{
+    flex:1.5;
+    background-image: url(../Images/kenyaFlag.gif);
+    opacity:50%;
+    font-weight: bold; 
+    margin-top: 143px;    
+}
+li a{
+    color: goldenrod;
+    background-blend-mode: color-dodge;
+}
+a:hover{
+    color: red;
+}
+.ul::after{
+    content:"*";
+   
+    opacity:10%;
+}
+body{
+background-color: gainsboro;
+
+}
+
+.flag{
+    flex:1.5;
+    background-image: url(../Images/usFlag.jpg);
+    opacity:50%;
+    margin-top: 143px;
+    font-weight: bold;
+    text-align: left;
+}
+table{
+    border: 3px solid #390080;
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    width:800px;
+}
+th{
+    border: 1px solid #390080;
+    padding: 5px;
+    text-align: center;
+}
+
+td{
+    border: 1px solid #390080;
+    padding: 5px;
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+.govt{
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    font-size: 1.2em;
+   
+}
+#agri{
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    font-size: 1.2em;
+}
+
+
+
+/*
+
+.us{  
+   font-size: 1.2em;   
+   display: inline-block;  
+   width: 63%;
+   padding-left: 2%;  
+   }
+
+.ul{
+    float: left;
+    width: 20%;
+    font-size: 1.2em;  
+    
+    height: 1900px;
+   
+    
+}
+.flag{   
+    font-size: 1.2em;
+    width: 15%;  
+    float: right;   
+    background-image: url(../Images/usFlag.jpg);
+    height: 1900px;
+    opacity: 20%;
+}
+.ul::after{
+    content:"";
+    background-image: url(../Images/usFlag.jpg);
+    background-color: blue;
+    height: 1900px;
+    width:20%;
+}
+body{
+    padding-right: 10px;
+    padding-left: 10px;     
+}
+

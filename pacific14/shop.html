@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="George Gichuki">
+    <meta name="description" content="Guests can buy books online to read more about
+    Pacific Trails Resort or practice yoga routines.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pacific Trails Resort :: Shop by George Gichuki</title>
+    <link rel="icon" href="images/WSD05_Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="pacific.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html.js">
+    </script>
+    <![endif]-->
+  
+</head>
+
+<body>
+    <!-- ************************
+    Wrapper
+    ************************ -->
+    <div id="shoppingCart">
+
+    <!-- Header -->
+    <header>
+        <h1>Pacific Trails Resort</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="yurts.html">Yurts</a></li>
+           <li><a href="activities.html">Activities</a></li>
+           <li><a href="reservations.html">Reservations</a></li>
+           <li><a href="shop.html">Shop</a></li>
+       </ul>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <h2>Shop at Pacific Trails</h2>       
+
+        <img src= "images/WSD05_Images/trailguide.jpg" alt="Coast" width = "155" height ="206">
+        <div class="productDescription">
+        <h3>Pacific Trails Hiking Guide</h3>
+        <p>
+            Guided hikes to the best trails around Pacific Trail Resort. Each hike includes a detailed route, 
+            distance, elevation change, and estimate time. 187 pages. Soft-cover. $19.95.           
+        </p>
+        
+        <form class="shopForm" method ="post" action="http://www.webdevfoundations.net/scripts/cart.asp">
+        <input type="hidden" name="desc1" id="desc1"  value="Hiking Guide">
+        <input type="hidden" name="cost1" id="cost1" value="19.95">
+        <input type="submit" value="Add to Cart" accesskey="D" tabindex="1" >
+        </form>
+        </div>
+        <br class="clear">        
+        
+        <img src= "images/WSD05_Images/yurtyoga.jpg" alt="Coast" width = "155" height ="206">
+
+        <div class="productDescription">
+        <h3>Yurt Yoga</h3>
+        <p>
+            Enjoy the restorative poses of yurt yoga in the comfort of your own home. Each pose is illustrated 
+            with several photographs, an explanation, and a description of the restorative benefits. 206 pages. 
+            Soft-cover. $ 24.95           
+        </p>
+       
+        <form class="shopForm" method ="post" action="http://www.webdevfoundations.net/scripts/cart.asp">
+        <input type="hidden" name="desc2" id="desc2"  value="Yurt Yoga">
+        <input type="hidden" name="cost2" id="cost2"  value="24.95">
+        <input type="submit" value="Add to Cart" accesskey="C" tabindex="2" >
+        </form>
+        </div>
+        <br class="clear">
+       
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+        <a href="index.html">Home</a>&nbsp;
+        <a href="yurts.html">Yurts</a>&nbsp;
+        <a href="activities.html">Activities</a>&nbsp;
+        <a href="reservations.html">Reservations</a>&nbsp;
+        <a href="shop.html">Shop</a><br>
+        </div>
+        Copyright &copy; 2020 Pacific Trails Resort<br>        
+        <a href="mailto:george.gichuki@occc.edu">george.gichuki@occc.edu</a>
+        <script>   
+            document.write("<p>This document was modified last on: ");
+            document.write(document.lastModified);
+            document.write("</p>");
+        </script>             
+    </footer>
+</div>
+</body>
+</html>

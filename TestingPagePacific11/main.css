@@ -1,0 +1,34 @@
+
+
+/*@media print{
+    .displayImage{
+        display: block;
+    }
+    .displayVideo{
+        display: none;
+    }
+    #gallery ul {
+        width:425px;
+    }
+    
+    #gallery a:after {
+        content: " (" attr(title) ") ";
+    }
+    #gallery ul a img{
+         float:left; 
+    }
+    #desktopGallery{
+        display:none;
+    }
+    #mobileGallery{
+        display:none;
+    }
+}*/
+@media only all and (max-width:768){
+    .desktopGallery{
+        display:none;
+    }
+    .mobileGallery{
+        display:block;
+    }
+}
