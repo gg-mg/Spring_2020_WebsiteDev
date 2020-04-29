@@ -1,5 +1,30 @@
-body {font-family:Verdana, Arial, sans-serif;
-       background-color: darkgray;
+/* *****************************
+    Table of contents
+
+Project Name: Final Project Spring 2020 Semester
+Author: George Gichuki
+Version: OCCC Spring 2020
+Last Changed: 4/29/2020
+
+Colors:  #A9A9A9 (Dark gray)
+         ##b3c7e6 (Tropical blue)
+         #000066 (Blue-magenta)
+         #ffffff (White)
+         #869dc7(Polo blue)
+         #00005D (Navy blue)  
+         #390080 (Pigment Indigo)  
+         #300300 (Seal Brown)
+         #000000 (Black) 
+
+Typography:
+
+Body:  
+    Arial, Verdana, sans-serif
+
+****************************** */
+body {
+    font-family:Verdana, Arial, sans-serif;
+    background-color: #A9A9A9;
 }
  #wrapper { background-color: #b3c7e6;       
             color: #000066;
@@ -18,72 +43,82 @@ body {font-family:Verdana, Arial, sans-serif;
        background-repeat: no-repeat;
 }
 
- nav {       
-       width: 150px;  
+ nav { width: 150px;  
        position: fixed;
        letter-spacing: 0.1em;      
  } 
- #mainColumn {
-       margin-left: 155px;
+ #mainColumn {margin-left: 155px;
        margin-right: 154px;
        background-color: #ffffff;
        color: #000000;
  } 
- header { 
-       background-color: #869dc7;
+ header {background-color: #869dc7;
        color: #00005D; 
-       font-size: 150%; 
-       padding: 0px 0px 0px 0px;
+       font-size: 120%;        
        background-image: url(Images/usFlag.jpg);       
        background-repeat: no-repeat;
        height: 149px; 
        background-position: right;        
        margin: 5px 0px 0px 155px;
  }
- #headerKenya { 
-       background-color: #869dc7;
+ #headerKenya {background-color: #869dc7;
        color: #00005D; 
-       font-size: 150%; 
+       font-size: 120%; 
        padding: 0px 0px 0px 0px;
        background-image: url(Images/kenyaFlag.png);       
        background-repeat: no-repeat;
        height: 149px; 
-       background-position: right; 
-       text-align: center;
+       background-position: right;       
        margin: 5px 0px 0px 155px;
 }
- h2 { color: #869dc7; 
-      font-family: arial, sans-serif;
+h1{padding: 50px 0px 0px 2px;       
+}
+#head{padding: 50px 0px 0px 0px; 
+}
+ h2 {color: #869dc7; 
+     font-family: arial, sans-serif;
  }
  main { display: block;
         padding: 20px 20px 0 20px; 
-        min-height: 800px;
+        min-height: 800px;     
  }  
  footer {font-size:70%;
-          text-align: center;
-                clear: right;
-          padding-bottom:20px;
- }
-
- 
- nav ul { list-style-type: none; 
-          padding: 10px; }
- nav a {   
-       width: 6em; 
-	color: #FFFFFF;
-	background-color: cadetblue;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	font-weight: bold;
-	/*text-align: center;*/       
+        text-align: center;
+        clear: right;
+        padding-bottom:20px;
+ } 
+ nav ul {list-style-type: none; 
+        padding: 10px;
+     }
+ nav a {width: 6em; 
+	   color: #ffffff;	
+	   font-family: Arial, Helvetica, sans-serif;
+	   font-size: 1em;
+	   font-weight: bold;	      
        margin: 0.1em;
        text-decoration: none; 
        display: block;
-	padding: 20px;    
+	   padding: 20px;    
        background-color: #b3c7e6;     
-	border-bottom: 1px solid #ffffff; 	
-
+	   border-bottom: 1px solid #ffffff; 
 }
+table{
+       border: 3px solid #390080;
+       border-collapse: collapse;        
+   }
+   th{
+       border: 1px solid #390080;
+       padding: 5px;       
+    }
+   
+   td{
+       border: 1px solid #390080;
+       padding: 5px;    
+   }
+  
+   .num{
+          text-align: center;
+   }
 
 /* ********************************************************************
                           Tablet Media Query
@@ -99,9 +134,21 @@ body {font-family:Verdana, Arial, sans-serif;
            margin: 0;
            box-shadow: none;
        }
+       #wrapperUS{
+        width: auto;
+        min-width: 0;
+        margin: 0;
+        box-shadow: none;
+    }
        h1{
-           margin: 0;
+        padding: 0px 0px 0px 0px; 
+        font-size: 120%;
+          
        }
+       #head{
+        padding: 0px 0px 0px 0px; 
+        font-size: 120%;
+        }
        nav{
            float: none;
            width: auto;
@@ -128,23 +175,26 @@ body {font-family:Verdana, Arial, sans-serif;
        footer{
            margin-left: 0;
        }
-       #navBottom{
-           display: none;
-       }
-       .productDescription{
-           clear: both;
-       }
+      
    }
    /* ********************************************************************
                              Smartphone Media Query
    ******************************************************************** */
    @media only screen and (max-width:768px){
    
-       h1{
-          height: 100%;
-          font-size: 1.5em;
-          padding-left: 0.3em; 
+       header{
+              background-image: none;
        }
+       #headerKenya{
+        background-image: none;
+ }
+       h1{         
+          padding: 0px 0px 0px 0px;      
+       }
+       #head{
+        padding: 0px 0px 0px 0px;      
+        }
+
        nav{        
            padding: 0;
        }   
@@ -158,7 +208,7 @@ body {font-family:Verdana, Arial, sans-serif;
            display: block;
            padding: 0.2em;
            font-size: 1.3em;
-           border-bottom: 1px #300 solid;
+           border-bottom: 1px #300300 solid;
        }
        nav ul{
            margin: 0;
@@ -168,7 +218,9 @@ body {font-family:Verdana, Arial, sans-serif;
            padding: 0.1em 0 0.1em 0.4em;       
        }
        main img{
-           display: none;
+          display: block;
+          width: 95%;
+          position: relative;
            padding-right: 0;
        }
        main ul{
@@ -178,50 +230,50 @@ body {font-family:Verdana, Arial, sans-serif;
            margin-left: 0;
            padding: 0;
        }
-       #navBottom{
-           display: none;
-       }
-       #mobile{
-           display:inline;
-       }
-       #desktop{
-           display:none;
-       }
-       #mySubmit{
-           display: block;
-           margin-left: 2em;
-       }
-       #myReset{
-           display: block;
-           margin-left: 2em;
-       }
-       label,input,textarea{
-           clear: both;
-           margin-left: 2em;
-           text-align: left;
-       }
-       #shoppingCart nav{
-           display: none;
-       }
-       #shoppingCart img{
-           display: block;
-       }
-       #desktopGallery{
-           display: none;
-       }
-       #mobileGallery{
-           display: block;       
-       }  
-       #gallery a:hover span{
-           display: none;
-       }
-       #gallery img{
-           display: block;
-       }
+      
        label.error{
            left: 20em;
            font-size: 0.7em;
        }
+       td,th{
+           font-size: 62%;
+           word-wrap: break-word;
+       }
+       table, thead, tbody, th, td, tr { 
+		display: block; 
+        }
+        .num{
+        text-align: left;
+        }
+        th { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	    }
+	
+	    tr { border: 1px solid #ccc; }
+	
+	    td { 	
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	    }
+        td:before { 		
+		position: absolute;		
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	    }
+        td:nth-of-type(1):before { content: "Country"; }
+        td:nth-of-type(2):before { content: "Population"; }
+	    td:nth-of-type(3):before { content: "GDP 2019"; }
+	    td:nth-of-type(4):before { content: "Agricultural Import/Export"; }
+	    td:nth-of-type(5):before { content: "Currency"; }
+	    td:nth-of-type(6):before { content: "Staple Food"; }
+	    td:nth-of-type(7):before { content: "Economy Rank in the World 2019"; }
    }
    /* ********************************************************************
                              Print Media Query
@@ -258,41 +310,9 @@ body {font-family:Verdana, Arial, sans-serif;
        }
        a{
            text-decoration: none;
-           color: #000;
+           color: #000000;
        }
-       #navBottom{
-           display: none;
-       }
-       .newPage{
-           page-break-before: always;
-       }
-       .printHidden{
-           display: none;
-       }
-       .shopForm{
-           display: none;
-       }
-       .displayImage{
-           display: block;
-       }
-       .displayVideo{
-           display: none;
-       }
-       #gallery ul {
-           width:425px;
-       }
-       #gallery a:after {
-           content: attr(title);
-       }
-       #gallery ul a img{
-            float:left; 
-       }
-       #desktopGallery{
-           display:none;
-       }
-       #mobileGallery{
-           display:none;
-       }
+  
    }
    
    
