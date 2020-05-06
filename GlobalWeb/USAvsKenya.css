@@ -15,6 +15,7 @@ Colors:  #A9A9A9 (Dark gray)
          #390080 (Pigment Indigo)  
          #300300 (Seal Brown)
          #000000 (Black) 
+         #dddddd (Light grey)
 
 Typography:
 
@@ -53,7 +54,7 @@ body {
        color: #000000;
  } 
  header {background-color: #869dc7;
-       color: #00005D; 
+       color: #fff; 
        font-size: 120%;        
        background-image: url(Images/usFlag.jpg);       
        background-repeat: no-repeat;
@@ -62,7 +63,7 @@ body {
        margin: 5px 0px 0px 155px;
  }
  #headerKenya {background-color: #869dc7;
-       color: #00005D; 
+       color:#fff; 
        font-size: 120%; 
        padding: 0px 0px 0px 0px;
        background-image: url(Images/kenyaFlag.png);       
@@ -104,21 +105,56 @@ h1{padding: 50px 0px 0px 2px;
 }
 table{
        border: 3px solid #390080;
-       border-collapse: collapse;        
+       border-collapse: collapse; 
+       margin: 60px 10px 10px 10px;       
+   }
+   caption{
+       padding: 5px;
    }
    th{
        border: 1px solid #390080;
-       padding: 5px;       
+       padding: 7px;       
     }
    
    td{
        border: 1px solid #390080;
-       padding: 5px;    
+       padding: 7px;    
    }
   
    .num{
           text-align: center;
    }
+   figcaption{
+       font-style: italic;
+       font-size: 0.9em;
+   }
+
+#centerTable { margin: 0px auto;  
+    border: 1px solid #ddd;   
+    border-collapse: collapse; 
+    margin: 20px 10px 10px 10px; 
+}
+#centerTable td{
+    width: 50%;   
+    border: none;
+    border: 1px solid #ddd;
+    padding: 7px;
+
+}
+#centerTable th{
+    text-align: left;  
+    border: none;
+    border: 1px solid #ddd;
+    padding: 7px;
+}
+#centerTable tr:nth-child(even){background-color: #f2f2f2;}
+.welcome{
+    color:#fff;
+    text-align: center;
+}
+
+
+
 
 /* ********************************************************************
                           Tablet Media Query
@@ -229,37 +265,35 @@ table{
        footer{
            margin-left: 0;
            padding: 0;
-       }
-      
-       label.error{
-           left: 20em;
-           font-size: 0.7em;
-       }
-       td,th{
+       }       
+       #table td, #table th{
            font-size: 62%;
            word-wrap: break-word;
        }
-       table, thead, tbody, th, td, tr { 
-		display: block; 
-        }
+       #table table{display: block; }
+       #table thead{display: block;} 
+       #table tbody{display: block;} 
+       #table th{display: block;} 
+       #table td{display: block;} 
+       #table tr {display: block;} 		
         .num{
         text-align: left;
         }
-        th { 
+        #table th { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	    }
 	
-	    tr { border: 1px solid #ccc; }
+        #table tr { border: 1px solid #ccc; }
 	
-	    td { 	
+        #table td { 	
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
 		padding-left: 50%; 
 	    }
-        td:before { 		
+        #table td:before { 		
 		position: absolute;		
 		top: 6px;
 		left: 6px;
@@ -267,13 +301,27 @@ table{
 		padding-right: 10px; 
 		white-space: nowrap;
 	    }
-        td:nth-of-type(1):before { content: "Country"; }
-        td:nth-of-type(2):before { content: "Population"; }
+        #table td:nth-of-type(1):before { content: "Country"; }
+        #table td:nth-of-type(2):before { content: "Population"; }
 	    td:nth-of-type(3):before { content: "GDP 2019"; }
 	    td:nth-of-type(4):before { content: "Agricultural Import/Export"; }
 	    td:nth-of-type(5):before { content: "Currency"; }
 	    td:nth-of-type(6):before { content: "Staple Food"; }
-	    td:nth-of-type(7):before { content: "Economy Rank in the World 2019"; }
+        td:nth-of-type(7):before { content: " Global Economy Ranking 2019"; }
+        
+        #centerTable { margin: 0px auto;
+           
+        }
+        #centerTable td{
+            width: 50%;
+            padding: 5px;
+           
+        }
+        #centerTable th{
+            text-align: left;
+            padding: 5px;
+            
+        }
    }
    /* ********************************************************************
                              Print Media Query
@@ -288,16 +336,10 @@ table{
        }   
        nav{
            display: none;
-       } 
-       main{
-           width: 90%;
-           padding: 1px 10px 1px 10px;
-           margin-left: 10px;
-           margin-right: 10px;      
-       }
-       main a::after{
-           content: " (" attr(href) ") ";
-           font-size: 0.9em;
+       }      
+       #mainColumn {
+           padding: 0;
+           margin: 0;
        }
        footer{
            margin-left: 0;
@@ -312,6 +354,10 @@ table{
            text-decoration: none;
            color: #000000;
        }
+       table{        
+        margin: 0px; 
+        padding: 0px;      
+    }      
   
    }
    
