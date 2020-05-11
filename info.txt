@@ -261,3 +261,27 @@ var yourArray = $("input:checkbox[name=type]:checked").map(function(){return $(t
   }
   }
 </script>
+-------------------------------------------------------------------------------------------
+<script>
+function validateForm() {
+  var x = document.forms["contact_form"]["myFName"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+-------------------------------------------------------------------------------------------
+label.error:nth-of-type(13){   
+    color:green;    
+   float: left;   
+}
+--------------------------------------------------------------------------------------------
+.cccc {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 20px;
+    margin-left: 200px;
+  }
+-----------------------------------------------------------------------------------------

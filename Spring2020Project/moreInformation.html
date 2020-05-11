@@ -11,9 +11,9 @@
   <link rel="icon" href="Images/sunset.ico" type="image/x-icon">
   <link rel="stylesheet" href="USAvsKenya.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
-  
+
   <!--Validations-->
   <script>
     $(document).ready(function () {
@@ -21,7 +21,7 @@
         rules: {
           sector: {
             required: true,
-            minlength:2
+            minlength: 2
           }
         },
         messages: {
@@ -31,39 +31,40 @@
           }
         }
       });
-   
-    });
 
-  </script>  
+    });
+  </script>
 
   <!--Javascript validation for text boxes and JQuery validation for checkboxes in ONE function-->
-  <script>    
-  function myFunction() {  
-    var x = document.forms["contact_form"]["myFName"].value;
-    var y = document.forms["contact_form"]["myLName"].value;
-    var z = document.forms["contact_form"]["myEmail"].value;
-  if (x == "") {
-    alert("First name must be filled out");
-    return false;
-  }
-  if (y == "") {
-    alert("Last name must be filled out");
-    return false;
-  }
-  if (z == "") {
-    alert("Email must be filled out");
-    return false;
-  }  
-  var yourArray = $("input:checkbox[name=sector]:checked").map(function(){return $(this).val()}).get(); 
-  var uhuru = $('#country').find(":selected").text(); 
-  if (yourArray.length === 0) {
-    $('#error_message').html("Error");
-  }
-  else{
-  $("#signupForm").onsubmit = alert("We will send you information on "+ uhuru +" " +"(" +yourArray +")" +" sector(s)");
-  }
-  }
-</script>
+  <script>
+    function myFunction() {
+      var x = document.forms["contact_form"]["myFName"].value;
+      var y = document.forms["contact_form"]["myLName"].value;
+      var z = document.forms["contact_form"]["myEmail"].value;
+      if (x == "") {
+        alert("First name must be filled out");
+        return false;
+      }
+      if (y == "") {
+        alert("Last name must be filled out");
+        return false;
+      }
+      if (z == "") {
+        alert("Email must be filled out");
+        return false;
+      }
+      var yourArray = $("input:checkbox[name=sector]:checked").map(function () {
+        return $(this).val()
+      }).get();
+      var uhuru = $('#country').find(":selected").text();
+      if (yourArray.length === 0) {
+        $('#error_message').html("Error");
+      } else {
+        $("#signupForm").onsubmit = alert("We will send you information on " + uhuru + " " + "(" + yourArray + ")" +
+          " sector(s)");
+      }
+    }
+  </script>
 
 </head>
 
@@ -90,26 +91,29 @@
       </ul>
     </nav>
     <div id="mainColumn">
-      
+
       <!-- Main -->
       <main>
         <p>Contact us for more information on Kenya vs US.</p>
         <p>Please fill the form below:</p>
         <form id="signupForm" name="contact_form" action="http://apollo1.occc.edu/genericFormHandler.php" method="post"
-         onsubmit="myFunction()">
+          onsubmit="myFunction()">
           <label for="myFName">*First Name:</label>
           <input type="text" id="myFName" name="myFName" accesskey="F" tabindex="1" required><br>
           <label for="myLName">*Last Name:</label>
           <input type="text" id="myLName" name="myLName" accesskey="L" tabindex="2" required><br>
           <label for="myEmail">*Email:</label>
           <input type="email" id="myEmail" name="myEmail" accesskey="E" tabindex="3" required> <br>
-          <label class="occc">OCCC Student: </label>
-          <input type="radio" id="occcStudent" name="student" value="occcStudent" accesskey="S" tabindex="4" required />
-          <label class="occc">Not OCCC Student:</label>
-          <input type="radio" id="nonStudent" name="student" value="nonStudent" accesskey="N" tabindex="5"required />
+          <fieldset>
+            <label class="occc">OCCC Student: </label>
+            <input type="radio" id="occcStudent" name="student" value="occcStudent" accesskey="S" tabindex="4"
+              required />
+            <label class="occc">Not OCCC Student:</label>
+            <input type="radio" id="nonStudent" name="student" value="nonStudent" accesskey="N" tabindex="5" required />
+          </fieldset>
           <br><br>
-          <label for="country">Country:</label>
-          <select size="1" name="country" id="country" required="required" >
+          <label for="country">*Country:</label>
+          <select size="1" name="country" id="country" required="required">
             <option value="">Select country</option>
             <option value="Kenya">Kenya</option>
             <option value="US">US</option>
@@ -117,11 +121,15 @@
           </select>
           <br><br>
           <fieldset id="theSector" class="form-group" form="signupForm">
-            <legend> The Sector: </legend>
-          <input type="checkbox" class="cbox" id="economy" name="sector" value="economy" accesskey="C" tabindex="6">Economy<br>
-          <input type="checkbox" class="cbox" id="farming" name="sector" value="farming" accesskey="D" tabindex="7"> Farming<br>
-          <input type="checkbox" class="cbox" id="gdp" name="sector" value="gdp"accesskey="H" tabindex="8">GDP<br>
-          <input type="checkbox" class="cbox" id="population" name="sector" value="population"accesskey="J" tabindex="9">Population
+            <legend> *The Sector: </legend><br>
+            <label class="occc">Economy:<input type="checkbox" class="cbox" id="economy" name="sector" value="economy"
+                accesskey="C" tabindex="6"></label><br>
+            <label class="occc">Farming:<input type="checkbox" class="cbox" id="farming" name="sector" value="farming"
+                accesskey="D" tabindex="7"></label><br>
+                <label class="occc">GDP:<input type="checkbox" class="cbox" id="gdp" name="sector" value="gdp" 
+                  accesskey="H" tabindex="8"></label><br>
+                  <label class="occc">Population:<input type="checkbox" class="cbox" id="population" name="sector" value="population"
+                accesskey="J" tabindex="9"></label>
           </fieldset>
           <br><br>
           <label for="myComments">Comments:</label>
@@ -132,7 +140,7 @@
             value="Clear Form">
         </form>
       </main>
-    </div>  
+    </div>
     <footer>
       <p id="disclaimer">Disclaimer: Oklahoma City Community College does not necessarily
         endorse the content or the respective links of this web page.</p>
