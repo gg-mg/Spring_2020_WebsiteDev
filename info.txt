@@ -1,0 +1,263 @@
+action="http://apollo1.occc.edu/genericFormHandler.php" 
+
+ <option value="">More information on:</option>
+
+ </script>
+  <script>
+ if (document.getElementById('student').checked) {
+        alert("checked");
+    }
+    else {
+        alert("You didn't check it! Let me check it for you.");
+    }
+
+  </script>
+  <script>
+  var radios = document.getElementsByTagName('input');
+  var value;
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].type === 'radio' && radios[i].checked) {
+        // get value, set checked flag or do whatever you need to
+        alert('caden');       
+    }
+}
+  </script>
+  <!--<script>
+    var checked_gender = document.querySelector('input[name = "student"]:checked');
+
+if(checked_gender != null){  //Test if something was checked
+alert(checked_gender.value); //Alert the value of the checked.
+} else {
+alert('Nothing checked'); //Alert, nothing was checked.
+}
+  </script>-->
+  <script>
+    $(document).ready(function(){
+        $("input[type='submit']").click(function(){
+            var radioValue = $("input[name='student']:checked").val();
+            if(radioValue){
+                alert("Your are a - " + radioValue);
+            }
+        });
+    });
+</script>
+<script>
+ function isOneChecked() {
+  // All <input> tags...
+  var chx = document.getElementsByTagName('input');
+  for (var i=0; i<chx.length; i++) {
+    // If you have more than one radio group, also check the name attribute
+    // for the one you want as in && chx[i].name == 'choose'
+    // Return true from the function on first match of a checked item
+    if (chx[i].type == 'radio' && !chx[i].checked) {
+      return true;
+      alert('something');
+    } 
+    return false;
+    alert('something');
+  } 
+</script>
+<script>
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                console.log("Checkbox is checked.");
+            }
+            else if($(this).prop("checked") == false){
+                console.log("Checkbox is unchecked.");
+            }
+        });
+    });
+</script>
+<script>
+  $(document).ready(function(){
+    $('#mySubmit').click(function(){
+        var check = true;
+        $("input:radio").each(function(){
+            var name = $(this).attr("name");
+            if($("input:radio[name="+name+"]:checked").length == 0){
+                check = false;
+            }
+        });
+        
+        if(check){
+            alert('One radio in each group is checked.');
+        }else{
+            alert('Please select one option in each question.');
+        }
+    });
+});
+</script>
+
+label.error{
+    font-size: 0.85em;
+    color: #F00;
+    position: relative;
+    text-align:  left;
+    margin-left: 2em;
+    width: 11em;
+}
+label.error{
+    clear:both;
+    float: none;
+    position: fixed;   
+    margin-left: 25em;   
+    width: 30em;
+    text-align:  left;
+    font-style: italic;
+    font-size: 0.85em;
+    font-family:  Arial, Helvetica, sans-serif;
+    color: #F00;
+    top: -2em;
+    display: inline-block;
+
+}
+  <!--<div id="dropDown">  
+#nonStudent{
+    display: inline;
+    margin-left: 0px;
+    position: relative;
+    top:-3;
+    background-color:green;
+
+}
+select.error,
+input[type=text].error,
+input[type=email].error,
+input[type=password].error {
+    border: 2px solid #ff0000;
+}
+label.error {
+    color: #ff0000;
+    font-size: .8em;
+}
+    <script>
+      function checkforblank() {
+
+        if (document.getElementById('name').value == "") {
+          alert("Entry can't be empty");
+          document.getElementById('name').style.borderColor = "red";
+          return false;
+        }
+
+        if (document.getElementById('email').value == "") {
+          alert("Entry can't be empty");
+          document.getElementById('email').style.borderColor = "red";
+          return false;
+        }
+
+
+
+
+        var radios = document.getElementsByName("rating");
+        var formValid = false;
+
+        var i = 0;
+        while (!formValid && i < radios.length) {
+          if (radios[i].checked) formValid = true; {
+            i++;
+          }
+        }
+
+        if (!formValid) {
+          alert("Please Pick Rating");
+          return formValid;
+          document.getElementsByName("rating").style.borderColor = "red";
+        }
+
+      }
+
+    </script>
+
+label.error:nth-of-type(8){
+   
+    color:blue;    
+    margin-left:0px;
+   top:0em;
+   clear: both;
+   float: left;
+ 
+}
+https://jqueryvalidation.org/
+
+$("#signupForm").validate({
+
+rules:{
+  sector:{required:true,
+  minlength:2
+  }
+},
+messages:{
+  sector:"Please check two boxes"
+}
+});
+
+ <!--jQuery Validation-->
+  <script>
+    $(document).ready(function () {
+      $('form').validate(); 
+     
+
+    });  </script>
+
+ <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+,
+        submitHandler: function (form) { // for demo
+          alert('valid form submitted'); // for demo
+          return false; // for demo
+        }
+
+https://stackoverflow.com/questions/43265149/how-to-get-multiple-checkbox-values-from-html-form
+----------------------------------------------------------------------
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/signup-form-js"></script>
+  <script type="text/javascript" src="JS/jquery-3.2.1.js"></script>
+-----------------------------------------------------------------------
+<script type="text/javascript">
+  var selected = new Array();
+  
+  $(document).ready(function() {
+  
+    $("input:checkbox[name=type]:checked").each(function() {
+         selected.push($(this).val());
+    });
+  
+  });
+-----------------------------------------------------------------------------
+var array = []
+var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+for (var i = 0; i < checkboxes.length; i++) {
+  array.push(checkboxes[i].value)
+}
+console.log(array);
+---------------------------------------------------------------------------
+  <script>
+
+for (var i = 0; i < checkboxes.length; i++) {
+  console.log('input[type=checkbox]:checked');
+}
+
+  
+  </script>
+---------------------------------------------------------------------------------
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+-----------------------------------------------------------------------------------
+var yourArray = $("input:checkbox[name=type]:checked").map(function(){return $(this).val()}).get()
+-----------------------------------------------------------------------------------------------
+'<p>'+"You selected the " + yourArray +" sector(s)"+ '</p>'
+---------------------------------------------------------------------------------
+  <script>
+  function myFunction() {
+  var yourArray = $("input:checkbox[name=sector]:checked").map(function(){return $(this).val()}).get();  
+  if (yourArray.length === 0) {
+    $('#error_message').html("Error");
+  }
+  else{
+  $("#signupForm").onsubmit = alert("You selected the " + yourArray +" sector(s)");
+  }
+  }
+</script>

@@ -89,7 +89,7 @@ h1{padding: 50px 0px 0px 2px;
         padding-bottom:20px;
  } 
  nav ul {list-style-type: none; 
-        padding: 10px;
+        padding: 2px;
      }
  nav a {width: 6em; 
 	   color: #ffffff;	
@@ -99,7 +99,7 @@ h1{padding: 50px 0px 0px 2px;
        margin: 0.1em;
        text-decoration: none; 
        display: block;
-	   padding: 20px;    
+	   padding: 16px;    
        background-color: #b3c7e6;     
 	   border-bottom: 1px solid #ffffff; 
 }
@@ -174,39 +174,43 @@ input,textarea {
 .shopForm{
     padding-bottom: 0.2em;
 }
-#occcStudent{    
-  top: 0px;
-  display: inline-block; 
-}
-#nonStudent{    
-    top: 0px;
-    display: inline-block; 
-    margin-left: 180px;  
-  }
-  input[type="radio"] {
-    margin-right: 5px;
-  }
 
+.cccc {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 1em 0px 20px;
+    margin-left: 200px;
+  }
+  input[type=radio],
+  input.radio {
+    float: left;
+    clear: none;
+    margin: 2px 10px 0 0px;
+  }
+  select.error{
+    border: 1px solid #ff0000;
+  }
+  input[type=text].error,
+  input[type=email].error{
+    border: 1px solid #ff0000;
+  }
+  input[type=checkbox].error{
+        color:green;
+  }
+ 
 .formDate{
     font-size: 0.7em;
     font-style: italic;
 }
-label.error{
-    float: none;
-    position: relative;
-    left: 30em;
-    top: -2em;
-    width: 20em;
-    text-align:  left;
-    font-style: italic;
-    font-size: 0.85em;
-    font-family:  Arial, Helvetica, sans-serif;
-    color: #F00;
-}
+
 #dropDown{  
     padding-bottom: 0.5em;
 }
 
+.ctbox{
+    display: inline-block;
+}
 .cbox{
     display: inline-block;
 }
@@ -214,8 +218,33 @@ label.error{
     font-size: 0.8em;
     font-style: italic;
 }
+label.error{
+   clear: both;
+    float: none;
+    position: relative;   
+    margin-left: 25em;   
+    width: 30em;
+    text-align:  left;
+    font-style: italic;
+    font-size: 0.85em;
+    font-family:  Arial, Helvetica, sans-serif;
+    color: #F00;
+    top: -2em;
+    display: inline-block;
+}
+label.error:nth-of-type(8){   
+    color:blue;     
+  
+}
+label.error:nth-of-type(13){   
+    color:green;    
+   float: left; 
+   
+}
 
-
+.cbox{
+    margin-left: 180px;
+}
 
 /* ********************************************************************
                           Tablet Media Query
